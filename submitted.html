@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Docusadsament</title>
+	</head>
+	<body>
+		<h1>THANK YOU!</h1>
+		<h3>Pesanan Anda berhasil diinput!</h3>
+		<h3>
+			Untuk mengirim ke lebih banyak orang, silahkan ulangi langkah sebelumnya
+			dengan data yang berbeda. <a href="index.html">Klik di sini!</a>
+		</h3>
+		<span id="nama-pengirim-1"></span>
+		<span id="kelas-pengirim-1"></span>
+		<script>
+			var params = new URLSearchParams(window.location.search);
+
+			var nama_pengirim_1 = params.get("entry.287391154");
+			var kelas_pengirim_1 = params.get("entry.2133329921");
+			console.log(params);
+			document.getElementById("nama-pengirim-1").textContent = nama_pengirim_1;
+			document.getElementById("kelas-pengirim-1").textContent =
+				kelas_pengirim_1;
+		</script>
+	</body>
+</html>

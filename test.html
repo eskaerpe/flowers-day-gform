@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="penerima-1" onchange="showHarga('penerima-1')">
+            Paket A: <input type="checkbox" name="" id="paket-A" /> <br />
+            Paket B: <input type="checkbox" name="" id="paket-B" /> <br />
+            Paket C: <input type="checkbox" name="" id="paket-C" /> <br />
+            <span id="harga">Harga : -</span>
+        </div>
+        <script>
+            var hargaPaketA = 10000;
+            var hargaPaketB = 15000;
+            var hargaPaketC = 20000;
+
+            function showHarga(IDPenerima) {
+                // define element penerima
+                var elementPenerima = document.getElementById("penerima-1");
+
+                // fetch all child  in element penerima
+                var paketAchecked = elementPenerima.querySelector("#paket-A").checked;
+                var paketBchecked = elementPenerima.querySelector("#paket-B").checked;
+                var paketCchecked = elementPenerima.querySelector("#paket-C").checked;
+                var harga = elementPenerima.querySelector("#harga");
+
+                var hargaTotal = 0;
+                if (paketAchecked) {
+                    hargaTotal += hargaPaketA;
+                }
+                if (paketBchecked) {
+                    hargaTotal += hargaPaketB;
+                }
+                if (paketCchecked) {
+                    hargaTotal += hargaPaketC;
+                }
+
+                harga.textContent = `Harga : ${hargaTotal}`;
+            }
+        </script>
+    </body>
+</html>

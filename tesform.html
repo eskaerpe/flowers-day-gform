@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="form" method="POST">
+            <div class="data-penerima">
+                <label for="nama-pengirim"></label>
+                <input type="text" id="nama-pengirim" placeholder="Namamu" name="Nama Pengirim" />
+            </div>
+            <div class="data-pengirim">
+                <label for="Kelas-pengirim"></label>
+                <input type="text" id="Kelas-pengirim" placeholder="Kelasmu" name="Kelas Pengirim" />
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            const url = "https://script.google.com/macros/s/AKfycbw7-62EsX5aII9BktKpg-5FXaqDyZ4n5sXssNrZZxxF/dev";
+
+            document.getElementById("form").action = url;
+        </script>
+    </body>
+</html>
