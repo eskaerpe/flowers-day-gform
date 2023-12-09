@@ -5,9 +5,26 @@ var hargaPesan = 5000;
 
 var jumlahPenerima = 1;
 
-var nameGoogleForms = {
-	namaPengirim: "entry.287391154",
-	kelasPengirim: "entry.2133329921",
+var GFormsPengirimName = {
+    namaPengirim: "entry.287391154",
+    kelasPengirim: "entry.2133329921",
+    emailPengirim: "entry.1592840593",
+    nomorTeleponPengirim: "entry.812587699",
+
+    namaPenerima1: "entry.1336288915",
+    kelasPenerima1: "entry.1967255455",
+    paketPenerima1: "entry.851185307",
+    pesanPenerima1: "entry.1519282563",
+
+    namaPenerima2: "entry.1016256525",
+    kelasPenerima2: "entry.821868320",
+    paketPenerima2: "entry.1083087706",
+    pesanPenerima2: "entry.551598349",
+
+    namaPenerima3: "entry.148643492",
+    kelasPenerima3: "entry.1810191057",
+    paketPenerima3: "entry.938679024",
+    pesanPenerima3: "entry.1776113027",
 };
 
 // var elementPenerima = document.getElementById(IDPenerima);
@@ -21,109 +38,126 @@ var nameGoogleForms = {
 var hargaTotal = 0;
 
 function showHarga(IDPenerima) {
-	// define element penerima
-	var elementPenerima = document.getElementById(IDPenerima);
+    // define element penerima
+    var elementPenerima = document.getElementById(IDPenerima);
 
-	// fetch all child  in element penerima
-	var paketAchecked = elementPenerima.querySelector("#paket-A").checked;
-	var paketBchecked = elementPenerima.querySelector("#paket-B").checked;
-	var paketCchecked = elementPenerima.querySelector("#paket-C").checked;
-	var pesan = elementPenerima.querySelector("#pesan");
+    // fetch all child  in element penerima
+    var paketAchecked = elementPenerima.querySelector("#paket-A").checked;
+    var paketBchecked = elementPenerima.querySelector("#paket-B").checked;
+    var paketCchecked = elementPenerima.querySelector("#paket-C").checked;
+    var pesan = elementPenerima.querySelector("#pesan");
 
-	var harga = elementPenerima.querySelector("#harga");
+    var harga = elementPenerima.querySelector("#harga");
 
-	var hargaSatuPenerima = 0;
+    var hargaSatuPenerima = 0;
 
-	if (paketAchecked) {
-		hargaSatuPenerima += hargaPaketA;
-		// hargaTotal += hargaPaketA;
-	}
-	if (paketBchecked) {
-		hargaSatuPenerima += hargaPaketB;
-		// hargaTotal += hargaPaketB;
-	}
-	if (paketCchecked) {
-		hargaSatuPenerima += hargaPaketC;
-		// hargaTotal += hargaPaketC;
-	}
+    if (paketAchecked) {
+        hargaSatuPenerima += hargaPaketA;
+        // hargaTotal += hargaPaketA;
+    }
+    if (paketBchecked) {
+        hargaSatuPenerima += hargaPaketB;
+        // hargaTotal += hargaPaketB;
+    }
+    if (paketCchecked) {
+        hargaSatuPenerima += hargaPaketC;
+        // hargaTotal += hargaPaketC;
+    }
 
-	if (paketAchecked || paketBchecked || paketCchecked) {
-		pesan.removeAttribute("disabled");
-	}
-	if (!paketAchecked && !paketBchecked && !paketCchecked) {
-		pesan.setAttribute("disabled", "");
-	}
-	if (pesan.value != "") {
-		hargaSatuPenerima += hargaPesan;
-		// hargaTotal += hargaPesan;
-	}
+    if (paketAchecked || paketBchecked || paketCchecked) {
+        pesan.removeAttribute("disabled");
+    }
+    if (!paketAchecked && !paketBchecked && !paketCchecked) {
+        pesan.setAttribute("disabled", "");
+    }
+    if (pesan.value != "") {
+        hargaSatuPenerima += hargaPesan;
+        // hargaTotal += hargaPesan;
+    }
 
-	// console.log(hargaTotal);
-	harga.textContent = `${hargaSatuPenerima}`;
+    // console.log(hargaTotal);
+    harga.textContent = `${hargaSatuPenerima}`;
 }
 
 function showHargaKeseluruhan() {
-	hargaTotal = 0;
-	var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
-	var hargaElements = document.querySelectorAll("#harga");
-	for (var i = 0; i < hargaElements.length; i++) {
-		// Pastikan elemen "harga" berisi angka
-		if (!isNaN(hargaElements[i].textContent)) {
-			hargaTotal += Number(hargaElements[i].textContent);
-		}
-	}
-	totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
+    hargaTotal = 0;
+    var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
+    var hargaElements = document.querySelectorAll("#harga");
+    for (var i = 0; i < hargaElements.length; i++) {
+        // Pastikan elemen "harga" berisi angka
+        if (!isNaN(hargaElements[i].textContent)) {
+            hargaTotal += Number(hargaElements[i].textContent);
+        }
+    }
+    totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
 }
 
 // Gunakan loop for untuk menjumlahkan semua elemen "harga"
 
 function addPenerima() {
-	if (jumlahPenerima < 10) {
-		jumlahPenerima += 1;
-		console.log(jumlahPenerima);
-		// Dapatkan referensi ke elemen template
-		var template = document.querySelector("#template-penerima");
+    if (jumlahPenerima < 10) {
+        jumlahPenerima += 1;
+        console.log(jumlahPenerima);
+        // Dapatkan referensi ke elemen template
+        var template = document.querySelector("#template-penerima");
 
-		// Gunakan metode cloneNode untuk mengkloning konten template
-		var clone = template.content.cloneNode(true);
+        // Gunakan metode cloneNode untuk mengkloning konten template
+        var clone = template.content.cloneNode(true);
 
-		// Tambahkan kloningan ke dokumen
-		var allPenerima = document.getElementById("all-penerima");
-		var tableBody = allPenerima.querySelector("tbody");
-		tableBody.appendChild(clone);
-		// Dapatkan referensi ke elemen tr yang baru ditambahkan
-		var newTr = tableBody.querySelector(`#penerima`);
+        // Tambahkan kloningan ke dokumen
+        var allPenerima = document.getElementById("all-penerima");
+        var tableBody = allPenerima.querySelector("tbody");
+        tableBody.appendChild(clone);
+        // Dapatkan referensi ke elemen tr yang baru ditambahkan
+        var newTr = tableBody.querySelector(`#penerima`);
 
-		// Ubah atribut onchange dan id dari elemen tr
-		newTr.setAttribute("onchange", `showHarga('penerima-${jumlahPenerima}')`);
-		newTr.setAttribute("id", `penerima-${jumlahPenerima}`);
+        // Ubah atribut onchange dan id dari elemen tr
+        newTr.setAttribute("onchange", `showHarga('penerima-${jumlahPenerima}')`);
+        newTr.setAttribute("id", `penerima-${jumlahPenerima}`);
 
-		// Dapatkan referensi ke elemen removeButton yang baru ditambahkan
-		var removeButton = newTr.querySelector("#remove-button");
+        // Dapatkan referensi ke elemen removeButton yang baru ditambahkan
+        var removeButton = newTr.querySelector("#remove-button");
 
-		// Ubah atribut onclick dan id dari elemen removeButton
-		removeButton.setAttribute(
-			"onclick",
-			`removePenerima('penerima-${jumlahPenerima}')`
-		);
-		removeButton.setAttribute("id", `remove-button-${jumlahPenerima}`);
-	} else if (jumlahPenerima >= 10) {
-		alert(
-			"Maaf, jumlah penerima setiap transaksi maksimal sebanyak 10 orang. Silahkan selesaikan transaksi ini terlebih dahulu, lalu ulangi lagi dari awal dengan penerima yang berbeda."
-		);
-	}
+        // Ubah atribut onclick dan id dari elemen removeButton
+        removeButton.setAttribute("onclick", `removePenerima('penerima-${jumlahPenerima}')`);
+        removeButton.setAttribute("id", `remove-button-${jumlahPenerima}`);
+
+        // GOOGLE FORMS THINGY WITH THE NAME
+        var namaPenerima = newTr.querySelector("#nama-penerima");
+        var kelasPenerima = newTr.querySelector("#kelas-penerima");
+        var paketPenerimaA = newTr.querySelector("#paket-A");
+        var paketPenerimaB = newTr.querySelector("#paket-B");
+        var paketPenerimaC = newTr.querySelector("#paket-C");
+        var pesanPenerima = newTr.querySelector("#pesan");
+
+        console.log(namaPenerima);
+        console.log(kelasPenerima);
+        console.log(paketPenerimaA);
+        console.log(paketPenerimaB);
+        console.log(paketPenerimaC);
+        console.log(pesanPenerima);
+        // EDIT GOOGLE FORMS ATTRIBUTE NAME
+        namaPenerima.setAttribute("name", GFormsPengirimName[`namaPenerima${jumlahPenerima}`]); //
+        kelasPenerima.setAttribute("name", GFormsPengirimName[`kelasPenerima${jumlahPenerima}`]); //
+        paketPenerimaA.setAttribute("name", GFormsPengirimName[`paketPenerima${jumlahPenerima}`]); //
+        paketPenerimaB.setAttribute("name", GFormsPengirimName[`paketPenerima${jumlahPenerima}`]); //
+        paketPenerimaC.setAttribute("name", GFormsPengirimName[`paketPenerima${jumlahPenerima}`]); //
+        pesanPenerima.setAttribute("name", GFormsPengirimName[`pesanPenerima${jumlahPenerima}`]); //
+    } else if (jumlahPenerima >= 10) {
+        alert("Maaf, jumlah penerima setiap transaksi maksimal sebanyak 10 orang. Silahkan selesaikan transaksi ini terlebih dahulu, lalu ulangi lagi dari awal dengan penerima yang berbeda.");
+    }
 }
 
 function removePenerima(IDPenerima) {
-	var penerima = document.getElementById(IDPenerima);
-	var hargaPenerima = penerima.querySelector("#harga");
-	hargaTotal -= Number(hargaPenerima.textContent);
+    var penerima = document.getElementById(IDPenerima);
+    var hargaPenerima = penerima.querySelector("#harga");
+    hargaTotal -= Number(hargaPenerima.textContent);
 
-	var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
-	totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
+    var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
+    totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
 
-	penerima.parentNode.removeChild(penerima);
-	penerima.remove();
+    penerima.parentNode.removeChild(penerima);
+    penerima.remove();
 }
 
 function Bayar() {}
