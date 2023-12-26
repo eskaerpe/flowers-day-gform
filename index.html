@@ -102,6 +102,7 @@
                             <th>Ket.</th>
                         </tr>
                         <tr id="penerima-1" onchange="showHarga('penerima-1')">
+                            <td style="display: none"></td>
                             <td>
                                 <input type="text" placeholder="Ketik nama di sini" id="nama-penerima" name="entry.1336288915" required />
                             </td>
@@ -227,13 +228,29 @@
 
 <!-- Modal -->
 <div class="modal fade" id="warningIsiDataPengirimModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Harap isi semua field data yang diperlukan sebelum melanjutkan.</div>
+            <div class="modal-body">Harap isi semua field data yang sebelum melanjutkan.</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Warning Harga-->
+<div class="modal fade" id="warningPilihProdukModal" tabindex="-1" aria-labelledby="warningPilihProdukModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="warningPilihProdukModal">Peringatan!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Setidaknya kamu harus memilih satu paket atau produk.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
@@ -243,13 +260,13 @@
 
 <!-- Modal Submit Connfirmation-->
 <div class="modal fade" id="submitConfirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="confirmationModalLabel">Konfirmasi</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Mohon dicek lagi pesanannya dan bukti pembayarannya. Apakah kamu yakin sudah mengisi semuanya dengan benar?</div>
+            <div class="modal-body">Mohon periksa kembali pesanan dan bukti pembayarannya. Apakah kamu yakin sudah mengisi semuanya dengan benar?</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
                 <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
@@ -260,13 +277,32 @@
 
 <!-- on load Modal -->
 <div class="modal fade" id="onLoadModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Hello There!</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tutorial Pengisian</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Ini tutorial untuk pengisiannya ya</div>
+            <div class="modal-body">
+                Ini tutorial untuk pengisiannya ya Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, natus pariatur, reprehenderit at impedit laboriosam aut sapiente in consequuntur repudiandae quibusdam optio assumenda id
+                iste autem asperiores voluptas ullam exercitationem? Eaque facilis ullam rerum, ipsa suscipit et vitae cum aspernatur eius quibusdam neque odit, aliquid aut eveniet. Minus asperiores ipsa esse ea et amet! Ipsam, itaque?
+                Numquam earum a reiciendis ipsa officiis minus facere eveniet odio tempora, esse incidunt cum doloribus cumque quas, nesciunt, maxime unde? Tempore ipsa aspernatur mollitia quas dicta natus reiciendis voluptas deserunt porro
+                cum? Obcaecati architecto est laborum fugit nam iure earum consectetur repudiandae natus dicta quaerat maiores labore libero recusandae quam deleniti quisquam culpa ipsum nihil corporis, quasi ullam id exercitationem nemo?
+                Praesentium excepturi aperiam commodi dolorem ad accusamus animi. Provident dolores voluptates illum ducimus sed optio, aspernatur beatae eius assumenda explicabo fuga nostrum odio nihil numquam nulla itaque sit laudantium
+                soluta iusto vitae veniam? Omnis vitae harum incidunt provident? Mollitia dignissimos dolorum quos, saepe numquam perspiciatis asperiores aperiam commodi, atque doloremque obcaecati aliquid unde impedit deleniti, ab
+                reprehenderit laborum voluptate odio eaque soluta ex fugiat nemo minus dolores. Vitae ducimus eaque eius molestias repellat tempore rem beatae autem voluptatibus, quisquam, esse, ex facere placeat? Praesentium expedita,
+                ratione, nobis qui magni ab quae fuga tempore perspiciatis quas laudantium sint aperiam nesciunt sunt quis? Quasi delectus explicabo magni pariatur provident dolorem quisquam aut nisi? Earum, voluptas dicta, sapiente illo
+                mollitia vero libero laborum minus itaque cum in? Nesciunt aperiam soluta porro iure, itaque voluptatem esse sint dignissimos veritatis reprehenderit voluptate error aliquam molestias veniam reiciendis ad tempora sequi
+                delectus! Mollitia explicabo, earum quasi id, molestiae maxime quia alias at ea molestias architecto corporis repellendus perspiciatis maiores illum dolore aperiam libero fugit quibusdam! Fugit repellat perspiciatis possimus
+                blanditiis maxime unde aperiam nobis, saepe ex quod ducimus alias nulla ratione sed voluptatem doloremque voluptates veritatis explicabo dolorem illum temporibus? Magni quod facere eum consequatur molestiae ad laboriosam?
+                Velit fugiat explicabo facilis dolore iste? Facere voluptatibus sed consequuntur reiciendis quas esse hic possimus culpa odio magni quo mollitia unde deserunt velit, accusamus pariatur et quia minus dolores! Repellat
+                doloribus deleniti quidem veniam explicabo accusantium corporis ratione et perspiciatis ducimus, iusto fugiat atque quas dolorem magnam quos quae ipsa, tempore corrupti vitae. Reiciendis, deserunt. A nihil eaque, soluta sunt
+                earum odio perspiciatis fugiat? Architecto eum fugiat autem labore nam! Expedita eius ab laudantium quidem, cumque dolorem culpa illo dicta, reprehenderit deleniti adipisci inventore, possimus cum dolor quia at nemo
+                similique enim quam. Tenetur eligendi necessitatibus, repellendus, ullam dolore rerum atque quam eum laudantium quis, impedit iusto. Nisi assumenda quasi repellendus explicabo distinctio aliquam similique, quaerat illum
+                maxime quos nihil ducimus doloribus in. Velit, magni tempora commodi quis dicta nihil distinctio! Voluptates laborum incidunt commodi magnam quod nesciunt vitae fuga asperiores, voluptate ea modi sint. Ullam deserunt unde
+                aspernatur quibusdam facilis? Reprehenderit provident ab tempora repellat rem minus, nostrum eos, a voluptas fugiat temporibus maiores. Enim velit sapiente corrupti eius! Architecto, facere officiis reprehenderit commodi
+                corrupti error. Expedita quos ab exercitationem.
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>

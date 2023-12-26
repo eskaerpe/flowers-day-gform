@@ -246,9 +246,33 @@ function validateForm() {
     return true;
 }
 
+function validateFormTable() {
+    var table = document.querySelector("table");
+    for (var i = 1; i < table.rows.length; i++) {
+        console.log(i);
+        var colHarga = document.querySelector(`table tr:nth-child(${i + 1}) td:nth-child(9)`);
+        if (colHarga.textContent === "-" || colHarga.textContent === "0") {
+            $("#warningPilihProdukModal").modal("show");
+            return false;
+        }
+        // var cols = rows[i].getElementsByTagName("td");
+        // if (cols.length > 7) {
+        //     var value = cols[7].innerText;
+        //     if (value === "-" || value === "0") {
+        //         alert('Kolom ke-8 tidak boleh berisi "-" atau 0');
+        //         return false;
+        //     }
+        // }
+    }
+
+    return true;
+}
+
 function submitFormModal() {
     if (validateForm() == true) {
-        $("#submitConfirmationModal").modal("show");
+        if (validateFormTable() == true) {
+            $("#submitConfirmationModal").modal("show");
+        }
     }
 }
 
