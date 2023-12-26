@@ -30,9 +30,12 @@ body {
 }
 
 #tambah-penerima-btn {
-    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0;
+    /* position: absolute;
     margin-top: -50px;
-    right: 20px;
+    right: 20px; */
 }
 
 #penerima-section {
@@ -61,7 +64,7 @@ textarea {
         width: 100%;
     }
     * {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     table {
         font-size: 1.2rem;
@@ -69,6 +72,9 @@ textarea {
     th td {
         margin: 10px 0;
         padding: 5px;
+    }
+    #tombol-submit {
+        width: 100%;
     }
 }
 

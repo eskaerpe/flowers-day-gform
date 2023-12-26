@@ -66,11 +66,13 @@ function checkFieldsAndShowSection() {
         // Jika semua field telah diisi, tampilkan section penerima
         penerimaSection.style.display = "";
         document.querySelector(".tombol-next").style.display = "none";
-        document.querySelector("#tombol-submit").style.display = "";
-        document.querySelector("#tambah-penerima-btn").style.display = "";
+        // document.querySelector("#tombol-submit").style.display = "";
+        // document.querySelector("#tambah-penerima-btn").style.display = "";
+        document.querySelector(".keterangan").style.display = "";
     } else {
         // Jika tidak, beri peringatan kepada pengguna
-        alert("Harap isi semua field data pengirim sebelum melanjutkan.");
+        // alert("Harap isi semua field data pengirim sebelum melanjutkan.");
+        $("#warningIsiDataPengirimModal").modal("show");
     }
 }
 
@@ -216,6 +218,9 @@ function addPenerima() {
 }
 
 function removePenerima(IDPenerima) {
+    var form = document.querySelector("form");
+    form.onchange = null;
+
     var penerima = document.getElementById(IDPenerima);
     var hargaPenerima = penerima.querySelector("#harga");
     hargaTotal -= Number(hargaPenerima.textContent);
@@ -228,3 +233,31 @@ function removePenerima(IDPenerima) {
 }
 
 function Bayar() {}
+
+function validateForm() {
+    var form = document.querySelector("form");
+    var inputs = form.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].hasAttribute("required") && inputs[i].value === "") {
+            $("#warningIsiDataPengirimModal").modal("show");
+            return false;
+        }
+    }
+    return true;
+}
+
+function submitFormModal() {
+    if (validateForm() == true) {
+        $("#submitConfirmationModal").modal("show");
+    }
+}
+
+function submitForm() {
+    var form = document.querySelector("form");
+    form.submit();
+}
+
+$(document).ready(function () {
+    // Show the Modal on load
+    $("#onLoadModal").modal("show");
+});
