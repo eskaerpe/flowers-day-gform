@@ -15,7 +15,7 @@
             var submitted = false;
         </script>
         <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location='submitted.html';}"></iframe>
-        <h1 class="text-center">Flowers Day 2023</h1>
+        <h1 class="text-center">Flowers Day 2024</h1>
         <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true">
             <!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true"> -->
             <section id="pengirim-section">
@@ -163,11 +163,52 @@
         </form>
         <div class="keterangan" style="display: none">
             <button id="tambah-penerima-btn" onclick="addPenerima()" class="btn btn-warning">+ tambah penerima</button>
-            <h3 class="">Total Harga:<span id="total-harga-keseluruhan">-</span></h3>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="tombol-submit" onclick="submitFormModal()">Submit</button>
+            <h3 class="total-harga-text">Total Harga:<span id="total-harga-keseluruhan" class="total-harga-text">-</span></h3>
+            <button id="tombol-submit" type="button" class="btn btn-primary" data-bs-toggle="modal" id="tombol-submit" onclick="submitFormModal()">Submit</button>
             <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitConfirmationModal" id="tombol-submit">Submit</button> -->
         </div>
     </body>
+    <footer style="background-color: #eee6d3">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="mb-3 text-dark">Flowers Day</h5>
+                    <p>Flowers Day merupakan salah satu program kerja dari OSIS SMA Taruna Bakti Bandung periode 2023-2024.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3 text-dark">Our Social</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a href="https://www.instagram.com/osissmatb/" style="color: #4f4f4f">IG OSIS SMATB</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="https://www.instagram.com/sma_tarunabaktibandung/" style="color: #4f4f4f">IG SMA Taruna Bakti</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-1 text-dark">Date & Time</h5>
+                    <table class="table" style="border-color: #666">
+                        <tbody>
+                            <tr>
+                                <td>Pre-Order</td>
+                                <td>15-20 Februari 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Pembagian Bunga</td>
+                                <td>28 Februari 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Website Created by:
+            <a class="text-dark" href="#">rei</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
     <template id="template-penerima">
         <tr id="penerima" onchange="showHarga('penerima')">
             <td style="display: none">

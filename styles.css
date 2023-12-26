@@ -3,7 +3,7 @@ input[type="checkbox"] {
 }
 
 body {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -56,9 +56,20 @@ textarea {
     width: 200px;
 }
 
+.keterangan {
+    width: 100%;
+    text-align: center;
+}
+.keterangan #tambah-penerima-btn {
+    margin-bottom: 20px;
+}
+.keterangan #tombol-submit {
+    margin-top: 5px;
+}
+
 @media screen and (max-width: 768px) {
     body {
-        width: 95%;
+        width: 100%;
     }
     #pengirim-section {
         width: 100%;
@@ -66,21 +77,35 @@ textarea {
     * {
         font-size: 0.9rem;
     }
-    table {
+    table,
+    .total-harga-text {
         font-size: 1.2rem;
     }
     th td {
         margin: 10px 0;
         padding: 5px;
     }
-    #tombol-submit {
+
+    .keterangan button:nth-child(1) {
         width: 100%;
+        margin: auto;
+    }
+    .keterangan .total-harga-text {
+        width: 90%;
+        margin: auto;
+    }
+    #tombol-submit {
+        width: 90%;
+        margin: auto;
+    }
+    .tombol-next {
+        font-size: 1.3rem;
     }
 }
 
 .tombol-next {
     cursor: pointer;
-    width: 100px;
+    width: 100%;
     margin: auto;
     border: 2px solid #548a92;
     border-radius: 20px;
@@ -94,4 +119,11 @@ textarea {
 
 table tr td:nth-child(9) {
     background-color: yellow;
+}
+
+footer {
+    /* width: auto; */
+    position: relative;
+    bottom: 0;
+    margin-top: 200px;
 }

@@ -51,6 +51,14 @@ var GFormsPengirimName = {
     kelasPenerima5: "entry.866986164",
     paketPenerima5: "entry.61340545",
     pesanPenerima5: "entry.734914188",
+
+    // Data Penerima 6
+    namaPengirim6: "entry.1800169115",
+    kelasPengirim6: "entry.1584508544",
+    namaPenerima6: "entry.1707055056",
+    kelasPenerima6: "entry.1394485322",
+    paketPenerima6: "entry.1379899113",
+    pesanPenerima6: "entry.1971979890",
 };
 
 function checkFieldsAndShowSection() {
