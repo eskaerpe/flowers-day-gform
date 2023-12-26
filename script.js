@@ -221,13 +221,13 @@ function addPenerima() {
         console.log(namaPengirimClone.value);
         console.log(kelasPengirimClone.value);
     } else if (jumlahPenerima >= 10) {
-        alert("Maaf, jumlah penerima setiap transaksi maksimal sebanyak 10 orang. Silahkan selesaikan transaksi ini terlebih dahulu, lalu ulangi lagi dari awal dengan penerima yang berbeda.");
+        $("#maxPenerimaModal").modal("show");
     }
 }
 
 function removePenerima(IDPenerima) {
     var form = document.querySelector("form");
-    form.onchange = null;
+    form.removeAttribute(onchange);
 
     var penerima = document.getElementById(IDPenerima);
     var hargaPenerima = penerima.querySelector("#harga");
@@ -238,6 +238,7 @@ function removePenerima(IDPenerima) {
 
     penerima.parentNode.removeChild(penerima);
     penerima.remove();
+    form.setAttribute(onchange, "showHargaKeseluruhan()");
 }
 
 function Bayar() {}
