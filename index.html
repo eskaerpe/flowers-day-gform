@@ -1,393 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Flowers Day 2024</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-		<link rel="stylesheet" href="styles.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<link rel="icon" href="logo-osissmatb-24.png" />
-	</head>
-	<body>
-		<script type="text/javascript">
-			var submitted = false;
-		</script>
-		<iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location='submitted.html';}"></iframe>
-		<h1 class="text-center">Flowers Day 2024</h1>
-		<form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true">
-			<!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true"> -->
-			<section id="pengirim-section">
-				<h3 class="text-center">Data Pengirim</h3>
-				<div class="data-pengirim">
-					<!-- <label for="nama-penerima">Nama Pengirim: </label> -->
-					<input type="text" placeholder="Nama Pengirim" id="nama-pengirim" name="entry.287391154" required />
-					<span class="text-danger"> <br />*Isi "Anonymous" jika nama tidak ingin ditampilkan</span>
-				</div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Flowers Day 2024</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="icon" href="logo-osissmatb-24.png" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location='submitted.html';}"></iframe>
+        <h1 class="text-center">Flowers Day 2024</h1>
+        <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true">
+            <!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true"> -->
+            <section id="pengirim-section">
+                <h3 class="text-center">Data Pengirim</h3>
+                <div class="data-pengirim">
+                    <!-- <label for="nama-penerima">Nama Pengirim: </label> -->
+                    <input type="text" placeholder="Nama Pengirim" id="nama-pengirim" name="entry.287391154" required />
+                    <span class="text-danger"> <br />*Isi "Anonymous" jika nama tidak ingin ditampilkan</span>
+                </div>
 
-				<div class="data-pengirim">
-					<!-- <label for="kelas-pengirim">Kelas: </label> -->
-					<select id="kelas-pengirim" name="entry.2133329921">
-						<option value="Anonymous">Anonymous</option>
-						<option value="X-1">X-1</option>
-						<option value="X-2">X-2</option>
-						<option value="X-3">X-3</option>
-						<option value="X-4">X-4</option>
-						<option value="X-5">X-5</option>
-						<option value="X-6">X-6</option>
-						<option value="X-7">X-7</option>
-						<option value="X-8">X-8</option>
-						<option value="X-9">X-9</option>
-						<option value="XI-1">XI-1</option>
-						<option value="XI-2">XI-2</option>
-						<option value="XI-3">XI-3</option>
-						<option value="XI-4">XI-4</option>
-						<option value="XI-5">XI-5</option>
-						<option value="XI-6">XI-6</option>
-						<option value="XI-7">XI-7</option>
-						<option value="XI-8">XI-8</option>
-						<option value="XI-9">XI-9</option>
-						<option value="XII-1">XII-1</option>
-						<option value="XII-2">XII-2</option>
-						<option value="XII-3">XII-3</option>
-						<option value="XII-4">XII-4</option>
-						<option value="XII-5">XII-5</option>
-						<option value="XII-6">XII-6</option>
-						<option value="XII-7">XII-7</option>
-						<option value="XII-8">XII-8</option>
-					</select>
-					<span class="text-danger"> <br />*Isi dengan kelasmu jika tidak dikirim secara anonim</span>
-				</div>
-				<div class="data-pengirim">
-					<!-- <label for="email-pengirim">Email Pengirim:</label> -->
-					<input type="email" name="entry.1592840593" id="email-pengirim" placeholder="Email Pengirim" required />
-				</div>
-				<div class="data-pengirim">
-					<!-- <label for="nomor-telepon-pengirim"></label> -->
-					<input type="number" name="entry.812587699" id="nomor-telepon-pengirim" placeholder="No Telepon Pengirim" required />
-					<span class="text-danger"> <br />*Email dan Nomor telepon tidak akan ditampilkan. Mohon tetap diisi dengan benar untuk konfirmasi jika terdapat kendala. </span>
-				</div>
-				<div class="data-pengirim" onclick="checkFieldsAndShowSection()">
-					<div class="tombol-next" style="display: block">Next</div>
-				</div>
-			</section>
-			<section id="penerima-section" style="display: none">
-				<table class="" id="all-penerima">
-					<tbody class="overflow-scroll text-center" onchange="showHargaKeseluruhan()">
-						<tr>
-							<th>Nama Penerima</th>
-							<th>Kelas Penerima</th>
-							<th>
-								Paket A <br />
-								(20.000)
-							</th>
-							<th>
-								Paket B <br />
-								(25.000)
-							</th>
-							<th>
-								Bouquet <br />
-								(15.000)
-							</th>
-							<th>
-								Batangan <br />
-								(10.000)
-							</th>
-							<th>
-								Kartu Ucapan <br />
-								(5.000)
-							</th>
-							<th>Total Harga <br /></th>
-							<th>Ket.</th>
-						</tr>
-						<tr id="penerima-1" onchange="showHarga('penerima-1')">
-							<td style="display: none"></td>
-							<td>
-								<input type="text" placeholder="Ketik nama di sini" id="nama-penerima" name="entry.1336288915" required />
-							</td>
-							<td>
-								<select id="kelas-penerima" name="entry.1967255455">
-									<option value="X-1">X-1</option>
-									<option value="X-2">X-2</option>
-									<option value="X-3">X-3</option>
-									<option value="X-4">X-4</option>
-									<option value="X-5">X-5</option>
-									<option value="X-6">X-6</option>
-									<option value="X-7">X-7</option>
-									<option value="X-8">X-8</option>
-									<option value="X-9">X-9</option>
-									<option value="XI-1">XI-1</option>
-									<option value="XI-2">XI-2</option>
-									<option value="XI-3">XI-3</option>
-									<option value="XI-4">XI-4</option>
-									<option value="XI-5">XI-5</option>
-									<option value="XI-6">XI-6</option>
-									<option value="XI-7">XI-7</option>
-									<option value="XI-8">XI-8</option>
-									<option value="XI-9">XI-9</option>
-									<option value="XII-1">XII-1</option>
-									<option value="XII-2">XII-2</option>
-									<option value="XII-3">XII-3</option>
-									<option value="XII-4">XII-4</option>
-									<option value="XII-5">XII-5</option>
-									<option value="XII-6">XII-6</option>
-									<option value="XII-7">XII-7</option>
-									<option value="XII-8">XII-8</option>
-								</select>
-							</td>
-							<td>
-								<input type="checkbox" name="entry.851185307" id="paket-A" value="Paket A" />
-							</td>
-							<td>
-								<input type="checkbox" name="entry.851185307" id="paket-B" value="Paket B" />
-							</td>
-							<td>
-								<input type="checkbox" name="entry.851185307" id="bouquet" value="Bouquet" />
-							</td>
-							<td>
-								<input type="checkbox" name="entry.851185307" id="batangan" value="Batangan" />
-							</td>
-							<td>
-								<textarea type="text" name="entry.1519282563" placeholder="Ketik pesanmu di sini" id="pesan" maxlength="200" disabled></textarea>
-							</td>
-							<td><span id="harga">-</span></td>
-							<td>-</td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- <button class="btn btn-success" onclick="bayar()">Bayar</button> -->
-				<!-- <input type="submit" name="" id="tombol-submit" style="display: none" /> -->
-				<!-- Button trigger modal -->
-			</section>
-			<input type="text" name="entry.781970590" id="total-harga-keseluruhan-to-form" placeholder="total harga" />
-			<input type="text" name="entry.1547535742" id="link-bukti-pembayaran-to-form" placeholder="link bukti pembayaran" />
-		</form>
-		<div class="keterangan" style="display: none">
-			<button id="tambah-penerima-btn" onclick="addPenerima()" class="btn btn-warning">+ tambah penerima</button>
-			<h3 class="total-harga-text">Total Harga:<span id="total-harga-keseluruhan" class="total-harga-text">-</span></h3>
+                <div class="data-pengirim">
+                    <!-- <label for="kelas-pengirim">Kelas: </label> -->
+                    <select id="kelas-pengirim" name="entry.2133329921">
+                        <option value="Anonymous">Anonymous</option>
+                        <option value="X-1">X-1</option>
+                        <option value="X-2">X-2</option>
+                        <option value="X-3">X-3</option>
+                        <option value="X-4">X-4</option>
+                        <option value="X-5">X-5</option>
+                        <option value="X-6">X-6</option>
+                        <option value="X-7">X-7</option>
+                        <option value="X-8">X-8</option>
+                        <option value="X-9">X-9</option>
+                        <option value="XI-1">XI-1</option>
+                        <option value="XI-2">XI-2</option>
+                        <option value="XI-3">XI-3</option>
+                        <option value="XI-4">XI-4</option>
+                        <option value="XI-5">XI-5</option>
+                        <option value="XI-6">XI-6</option>
+                        <option value="XI-7">XI-7</option>
+                        <option value="XI-8">XI-8</option>
+                        <option value="XI-9">XI-9</option>
+                        <option value="XII-1">XII-1</option>
+                        <option value="XII-2">XII-2</option>
+                        <option value="XII-3">XII-3</option>
+                        <option value="XII-4">XII-4</option>
+                        <option value="XII-5">XII-5</option>
+                        <option value="XII-6">XII-6</option>
+                        <option value="XII-7">XII-7</option>
+                        <option value="XII-8">XII-8</option>
+                    </select>
+                    <span class="text-danger"> <br />*Isi dengan kelasmu jika tidak dikirim secara anonim</span>
+                </div>
+                <div class="data-pengirim">
+                    <!-- <label for="email-pengirim">Email Pengirim:</label> -->
+                    <input type="email" name="entry.1592840593" id="email-pengirim" placeholder="Email Pengirim" required />
+                </div>
+                <div class="data-pengirim">
+                    <!-- <label for="nomor-telepon-pengirim"></label> -->
+                    <input type="number" name="entry.812587699" id="nomor-telepon-pengirim" placeholder="No Telepon Pengirim" required />
+                    <span class="text-danger"> <br />*Email dan Nomor telepon tidak akan ditampilkan. Mohon tetap diisi dengan benar untuk konfirmasi jika terdapat kendala. </span>
+                </div>
+                <div class="data-pengirim" onclick="checkFieldsAndShowSection()">
+                    <div class="tombol-next" style="display: block">Next</div>
+                </div>
+            </section>
+            <section id="product">
+                <div class="container">
+                    <div class="all-cards">
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://lzd-img-global.slatic.net/g/ff/kf/Sacce0bf1a73948e79e6e34926ecc5798X.jpg_720x720q80.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Paket A</h2>
+                            <div class="card-body">
+                                <p class="card-text">Bouquet + Silverqueen</p>
+                            </div>
+                            <a class="btn btn-primary w-auto">Rp.20.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://down-id.img.susercontent.com/file/c655f88b44ccd1e42165efdb59301a11" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Paket B</h2>
+                            <div class="card-body">
+                                <p class="card-text">Bouquet + Pocky</p>
+                            </div>
+                            <a class="btn btn-primary w-auto">Rp.25.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/5/12/3fe1b143-5aa7-47f6-b48c-ee628d0dfe15.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Bouquet</h2>
+                            <div class="card-body">
+                                <p class="card-text">Hanya satu bouquet</p>
+                            </div>
+                            <a class="btn btn-primary w-auto">Rp.15.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/3/412f2228-e17a-4bbe-befe-0fe694e93735.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Batangan</h2>
+                            <div class="card-body">
+                                <p class="card-text">Hanya satu bunga batangan</p>
+                            </div>
+                            <a class="btn btn-primary w-auto">Rp.10.000</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="penerima-section" style="display: none">
+                <table class="" id="all-penerima">
+                    <tbody class="overflow-scroll text-center" onchange="showHargaKeseluruhan()">
+                        <tr>
+                            <th>Nama Penerima</th>
+                            <th>Kelas Penerima</th>
+                            <th>
+                                Paket A <br />
+                                (20.000)
+                            </th>
+                            <th>
+                                Paket B <br />
+                                (25.000)
+                            </th>
+                            <th>
+                                Bouquet <br />
+                                (15.000)
+                            </th>
+                            <th>
+                                Batangan <br />
+                                (10.000)
+                            </th>
+                            <th>
+                                Kartu Ucapan <br />
+                                (5.000)
+                            </th>
+                            <th>Total Harga <br /></th>
+                            <th>Ket.</th>
+                        </tr>
+                        <tr id="penerima-1" onchange="showHarga('penerima-1')">
+                            <td style="display: none"></td>
+                            <td>
+                                <input type="text" placeholder="Ketik nama di sini" id="nama-penerima" name="entry.1336288915" required />
+                            </td>
+                            <td>
+                                <select id="kelas-penerima" name="entry.1967255455">
+                                    <option value="X-1">X-1</option>
+                                    <option value="X-2">X-2</option>
+                                    <option value="X-3">X-3</option>
+                                    <option value="X-4">X-4</option>
+                                    <option value="X-5">X-5</option>
+                                    <option value="X-6">X-6</option>
+                                    <option value="X-7">X-7</option>
+                                    <option value="X-8">X-8</option>
+                                    <option value="X-9">X-9</option>
+                                    <option value="XI-1">XI-1</option>
+                                    <option value="XI-2">XI-2</option>
+                                    <option value="XI-3">XI-3</option>
+                                    <option value="XI-4">XI-4</option>
+                                    <option value="XI-5">XI-5</option>
+                                    <option value="XI-6">XI-6</option>
+                                    <option value="XI-7">XI-7</option>
+                                    <option value="XI-8">XI-8</option>
+                                    <option value="XI-9">XI-9</option>
+                                    <option value="XII-1">XII-1</option>
+                                    <option value="XII-2">XII-2</option>
+                                    <option value="XII-3">XII-3</option>
+                                    <option value="XII-4">XII-4</option>
+                                    <option value="XII-5">XII-5</option>
+                                    <option value="XII-6">XII-6</option>
+                                    <option value="XII-7">XII-7</option>
+                                    <option value="XII-8">XII-8</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="entry.851185307" id="paket-A" value="Paket A" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="entry.851185307" id="paket-B" value="Paket B" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="entry.851185307" id="bouquet" value="Bouquet" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="entry.851185307" id="batangan" value="Batangan" />
+                            </td>
+                            <td>
+                                <textarea type="text" name="entry.1519282563" placeholder="Ketik pesanmu di sini" id="pesan" maxlength="200" disabled></textarea>
+                            </td>
+                            <td><span id="harga">-</span></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <button class="btn btn-success" onclick="bayar()">Bayar</button> -->
+                <!-- <input type="submit" name="" id="tombol-submit" style="display: none" /> -->
+                <!-- Button trigger modal -->
+            </section>
+            <input type="text" name="entry.781970590" id="total-harga-keseluruhan-to-form" placeholder="total harga" />
+            <input type="text" name="entry.1547535742" id="link-bukti-pembayaran-to-form" placeholder="link bukti pembayaran" />
+        </form>
+        <div class="keterangan" style="display: none">
+            <button id="tambah-penerima-btn" onclick="addPenerima()" class="btn">+ tambah penerima</button>
+            <h3 class="total-harga-text">Total Harga:<span id="total-harga-keseluruhan" class="total-harga-text">-</span></h3>
 
-			<input type="file" name="" id="bukti-pembayaran-input-file" accept="image/png, image/jpg, image/jpeg, image/heic, image/heif, image/tiff" />
+            <div class="bukti-bayar">
+                <input type="file" name="" id="bukti-pembayaran-input-file" accept="image/png, image/jpg, image/jpeg, image/heic, image/heif, image/tiff" />
+                <label for="bukti-pembayaran-input-file">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload" class="svg-inline--fa fa-upload fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            fill="currentColor"
+                            d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                        ></path>
+                    </svg>
+                    <span>Upload bukti Pembayaran</span>
+                </label>
+            </div>
 
-			<button id="tombol-submit" type="button" class="btn btn-primary" data-bs-toggle="modal" id="tombol-submit" onclick="submitFormModal()">Submit</button>
-			<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitConfirmationModal" id="tombol-submit">Submit</button> -->
-		</div>
-	</body>
-	<footer style="background-color: #eee6d3">
-		<div class="container p-4">
-			<div class="row">
-				<div class="col-lg-6 col-md-12 mb-4">
-					<h5 class="mb-3 text-dark">Flowers Day</h5>
-					<p>Flowers Day merupakan salah satu program kerja dari OSIS SMA Taruna Bakti periode 2023-2024.</p>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4">
-					<h5 class="mb-3 text-dark">Our Social</h5>
-					<ul class="list-unstyled mb-0">
-						<li class="mb-1">
-							<a href="https://www.instagram.com/osissmatb/" style="color: #4f4f4f">IG OSIS SMATB</a>
-						</li>
-						<li class="mb-1">
-							<a href="https://www.instagram.com/sma_tarunabaktibandung/" style="color: #4f4f4f">IG SMA Taruna Bakti</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4">
-					<h5 class="mb-1 text-dark">Date & Time</h5>
-					<table class="table" style="border-color: #666">
-						<tbody>
-							<tr>
-								<td>Pre-Order</td>
-								<td>15-20 Februari 2024</td>
-							</tr>
-							<tr>
-								<td>Pembagian Bunga</td>
-								<td>28 Februari 2024</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-			© 2024 Website Created by:
-			<a class="text-dark" href="#">rei</a>
-		</div>
-		<!-- Copyright -->
-	</footer>
-	<template id="template-penerima">
-		<tr id="penerima" onchange="showHarga('penerima')">
-			<td style="display: none">
-				<input type="text" placeholder="Nama Pengirim" id="nama-pengirim" name="entry.287391154" />
-				<input type="text" placeholder="Kelas Pengirim" id="kelas-pengirim" name="entry.287391154" />
-			</td>
+            <button id="tombol-submit" type="button" class="btn btn-primary" data-bs-toggle="modal" id="tombol-submit" onclick="submitFormModal()">Submit</button>
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitConfirmationModal" id="tombol-submit">Submit</button> -->
+        </div>
+    </body>
+    <footer style="background-color: #eee6d3">
+        <div class="container p-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="mb-3 text-dark">Flowers Day</h5>
+                    <p>Flowers Day merupakan salah satu program kerja dari OSIS SMA Taruna Bakti periode 2023-2024.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3 text-dark">Our Social</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a href="https://www.instagram.com/osissmatb/" style="color: #4f4f4f">IG OSIS SMATB</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="https://www.instagram.com/sma_tarunabaktibandung/" style="color: #4f4f4f">IG SMA Taruna Bakti</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-1 text-dark">Date & Time</h5>
+                    <table class="table" style="border-color: #666">
+                        <tbody>
+                            <tr>
+                                <td>Pre-Order</td>
+                                <td>15-20 Februari 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Pembagian Bunga</td>
+                                <td>28 Februari 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 text-center">
+                    <h5>Interested in creating a website like this</h5>
+                    <p>Please don't hesitate to contact me for business inquires. <a href="https://wa.me/081380730390?text=Halo%2C%20saya%20mau%20membuat%20website%20seperti%20Flowers%20Day%20ini.%20">Click Here</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Website Created by:
+            <a class="text-dark" href="#">rei</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <template id="template-penerima">
+        <tr id="penerima" onchange="showHarga('penerima')">
+            <td style="display: none">
+                <input type="text" placeholder="Nama Pengirim" id="nama-pengirim" name="entry.287391154" />
+                <input type="text" placeholder="Kelas Pengirim" id="kelas-pengirim" name="entry.287391154" />
+            </td>
 
-			<td>
-				<input type="text" placeholder="Ketik nama di sini" id="nama-penerima" name="entry.1336288915" required />
-			</td>
-			<td>
-				<select id="kelas-penerima" required name="entry.1967255455">
-					<option value="X-1">X-1</option>
-					<option value="X-2">X-2</option>
-					<option value="X-3">X-3</option>
-					<option value="X-4">X-4</option>
-					<option value="X-5">X-5</option>
-					<option value="X-6">X-6</option>
-					<option value="X-7">X-7</option>
-					<option value="X-8">X-8</option>
-					<option value="X-9">X-9</option>
-					<option value="XI-1">XI-1</option>
-					<option value="XI-2">XI-2</option>
-					<option value="XI-3">XI-3</option>
-					<option value="XI-4">XI-4</option>
-					<option value="XI-5">XI-5</option>
-					<option value="XI-6">XI-6</option>
-					<option value="XI-7">XI-7</option>
-					<option value="XI-8">XI-8</option>
-					<option value="XI-9">XI-9</option>
-					<option value="XII-1">XII-1</option>
-					<option value="XII-2">XII-2</option>
-					<option value="XII-3">XII-3</option>
-					<option value="XII-4">XII-4</option>
-					<option value="XII-5">XII-5</option>
-					<option value="XII-6">XII-6</option>
-					<option value="XII-7">XII-7</option>
-					<option value="XII-8">XII-8</option>
-				</select>
-			</td>
-			<td><input type="checkbox" name="entry.851185307" id="paket-A" value="Paket A" class="paket-penerima" /></td>
-			<td><input type="checkbox" name="entry.851185307" id="paket-B" value="Paket B" class="paket-penerima" /></td>
-			<td><input type="checkbox" name="entry.851185307" id="bouquet" value="Bouquet" /></td>
-			<td><input type="checkbox" name="entry.851185307" id="batangan" value="Batangan" /></td>
-			<td>
-				<textarea type="text" name="entry.1519282563" placeholder="Ketik pesanmu di sini" id="pesan" maxlength="200" disabled></textarea>
-			</td>
-			<td><span id="harga">-</span></td>
-			<td>
-				<button id="remove-button" class="btn btn-danger" onlick="removePenerima('penerima')">Hapus</button>
-			</td>
-		</tr>
-	</template>
-	<script src="script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+            <td>
+                <input type="text" placeholder="Ketik nama di sini" id="nama-penerima" name="entry.1336288915" required />
+            </td>
+            <td>
+                <select id="kelas-penerima" required name="entry.1967255455">
+                    <option value="X-1">X-1</option>
+                    <option value="X-2">X-2</option>
+                    <option value="X-3">X-3</option>
+                    <option value="X-4">X-4</option>
+                    <option value="X-5">X-5</option>
+                    <option value="X-6">X-6</option>
+                    <option value="X-7">X-7</option>
+                    <option value="X-8">X-8</option>
+                    <option value="X-9">X-9</option>
+                    <option value="XI-1">XI-1</option>
+                    <option value="XI-2">XI-2</option>
+                    <option value="XI-3">XI-3</option>
+                    <option value="XI-4">XI-4</option>
+                    <option value="XI-5">XI-5</option>
+                    <option value="XI-6">XI-6</option>
+                    <option value="XI-7">XI-7</option>
+                    <option value="XI-8">XI-8</option>
+                    <option value="XI-9">XI-9</option>
+                    <option value="XII-1">XII-1</option>
+                    <option value="XII-2">XII-2</option>
+                    <option value="XII-3">XII-3</option>
+                    <option value="XII-4">XII-4</option>
+                    <option value="XII-5">XII-5</option>
+                    <option value="XII-6">XII-6</option>
+                    <option value="XII-7">XII-7</option>
+                    <option value="XII-8">XII-8</option>
+                </select>
+            </td>
+            <td><input type="checkbox" name="entry.851185307" id="paket-A" value="Paket A" class="paket-penerima" /></td>
+            <td><input type="checkbox" name="entry.851185307" id="paket-B" value="Paket B" class="paket-penerima" /></td>
+            <td><input type="checkbox" name="entry.851185307" id="bouquet" value="Bouquet" /></td>
+            <td><input type="checkbox" name="entry.851185307" id="batangan" value="Batangan" /></td>
+            <td>
+                <textarea type="text" name="entry.1519282563" placeholder="Ketik pesanmu di sini" id="pesan" maxlength="200" disabled></textarea>
+            </td>
+            <td><span id="harga">-</span></td>
+            <td>
+                <button id="remove-button" class="btn btn-danger" onlick="removePenerima('penerima')">Hapus</button>
+            </td>
+        </tr>
+    </template>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </html>
 
 <!-- Modal -->
 <div class="modal fade" id="warningIsiDataPengirimModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan!</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">Harap isi semua field data yang sebelum melanjutkan.</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Harap isi semua field data yang sebelum melanjutkan.</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal Warning Harga-->
 <div class="modal fade" id="warningPilihProdukModal" tabindex="-1" aria-labelledby="warningPilihProdukModal" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="warningPilihProdukModal">Peringatan!</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">Setidaknya kamu harus memilih satu paket atau produk.</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="warningPilihProdukModal">Peringatan!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Setidaknya kamu harus memilih satu paket atau produk.</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal Submit Connfirmation-->
 <div class="modal fade" id="submitConfirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="confirmationModalLabel">Konfirmasi</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">Mohon periksa kembali pesanan dan bukti pembayarannya. Apakah kamu yakin sudah mengisi semuanya dengan benar?</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-				<button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="confirmationModalLabel">Konfirmasi</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Mohon periksa kembali pesanan dan bukti pembayarannya. Apakah kamu yakin sudah mengisi semuanya dengan benar?</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Max Penerima Modal -->
 <div class="modal fade" id="maxPenerimaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian!</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<p>Maaf, jumlah penerima setiap transaksi maksimal sebanyak 10 orang. Silahkan selesaikan transaksi ini terlebih dahulu, lalu ulangi lagi dari awal dengan penerima yang berbeda.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Maaf, jumlah penerima setiap transaksi maksimal sebanyak 10 orang. Silahkan selesaikan transaksi ini terlebih dahulu, lalu ulangi lagi dari awal dengan penerima yang berbeda.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Bukti Pembayaran Confirmation Modal -->
 <div class="modal fade" id="buktiPembayaranConfirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian!</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<p>Bukti Pembayaran belum ada, silahkan upload bukti pembayarannya berupa gambar dengan format jpg, jpeg, atau png.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bukti Pembayaran belum ada, silahkan upload bukti pembayarannya berupa gambar dengan format jpg, jpeg, atau png.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Loading Modal -->
 <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="exampleModalLabel">Loading...</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<p>Mohon ditunggu</p>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Loading...</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Mohon ditunggu</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- on load Modal -->
 <div class="modal fade" id="onLoadModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="exampleModalLabel">Tutorial Pengisian</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<h3 class="text-center">Isi Data Pengirim</h3>
-				<p>1. Isi dengan namamu, boleh dengan nama asli ataupun nama panggilan. Jika tidak ingin diketahui identitas pengirimnya, maka isi dengan "Anonymous".</p>
-				<img src="tutorial-pengisian/step-1.png" alt="" />
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tutorial Pengisian</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 class="text-center">Isi Data Pengirim</h3>
+                <p>1. Isi dengan namamu, boleh dengan nama asli ataupun nama panggilan. Jika tidak ingin diketahui identitas pengirimnya, maka isi dengan "Anonymous".</p>
+                <img src="tutorial-pengisian/step-1.png" alt="" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
