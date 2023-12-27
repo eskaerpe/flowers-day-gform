@@ -127,3 +127,10 @@ footer {
     bottom: 0;
     margin-top: 200px;
 }
+
+#onLoadModal .modal-body {
+    text-align: center;
+}
+#onLoadModal p {
+    text-align: justify;
+}
