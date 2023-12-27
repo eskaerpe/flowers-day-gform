@@ -116,6 +116,10 @@ function checkFieldsAndShowSection() {
     }
 }
 
+function showTutorial() {
+    $("#onLoadModal").modal("show");
+}
+
 // var elementPenerima = document.getElementById(IDPenerima);
 // var namaPenerimaValue = document.getElementById("nama-penerima").value;
 // var kelasPenerimaValue = document.getElementById("kelas-penerima").value;
@@ -358,12 +362,12 @@ function submitFormModal() {
     }
 }
 
-function submitForm() {
-    var form = document.querySelector("form");
-    form.submit();
-}
+// function submitForm() {
+//     var form = document.querySelector("form");
+//     form.submit();
+// }
 
-$(document).ready(function () {
-    // Show the Modal on load
-    $("#onLoadModal").modal("show");
-});
+// $(document).ready(function () {
+//     // Show the Modal on load
+//     $("#onLoadModal").modal("show");
+// });

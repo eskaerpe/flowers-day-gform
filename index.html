@@ -15,11 +15,50 @@
             var submitted = false;
         </script>
         <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location='submitted.html';}"></iframe>
-        <h1 class="text-center">Flowers Day 2024</h1>
+        <h1 class="text-center m-0 p-2" style="font-size: 2.5rem; background-color: #bfb8a9">Flowers Day 2024</h1>
         <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true">
             <!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true"> -->
+            <section id="product" style="background-color: #eee6d3">
+                <div class="container p-2">
+                    <h2 class="text-center mt-3">Our Products</h2>
+                    <div class="all-cards m-0">
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://lzd-img-global.slatic.net/g/ff/kf/Sacce0bf1a73948e79e6e34926ecc5798X.jpg_720x720q80.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Paket A</h2>
+                            <div class="card-body">
+                                <p class="card-text">Bouquet + Silverqueen</p>
+                            </div>
+                            <a class="btn btn-harga w-auto">Rp.20.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://down-id.img.susercontent.com/file/c655f88b44ccd1e42165efdb59301a11" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Paket B</h2>
+                            <div class="card-body">
+                                <p class="card-text">Bouquet + Pocky</p>
+                            </div>
+                            <a class="btn btn-harga w-auto">Rp.25.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/5/12/3fe1b143-5aa7-47f6-b48c-ee628d0dfe15.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Bouquet</h2>
+                            <div class="card-body">
+                                <p class="card-text">Hanya satu bouquet</p>
+                            </div>
+                            <a class="btn btn-harga w-auto">Rp.15.000</a>
+                        </div>
+                        <div class="card p-2" style="width: 18rem">
+                            <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/3/412f2228-e17a-4bbe-befe-0fe694e93735.jpg" class="card-img-top" alt="..." />
+                            <h2 class="ms-3 mt-2">Batangan</h2>
+                            <div class="card-body">
+                                <p class="card-text">Hanya satu bunga batangan</p>
+                            </div>
+                            <a class="btn btn-harga w-auto">Rp.10.000</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="pengirim-section">
-                <h3 class="text-center">Data Pengirim</h3>
+                <h3 class="text-center mb-3">Data Pengirim</h3>
                 <div class="data-pengirim">
                     <!-- <label for="nama-penerima">Nama Pengirim: </label> -->
                     <input type="text" placeholder="Nama Pengirim" id="nama-pengirim" name="entry.287391154" required />
@@ -68,48 +107,12 @@
                     <input type="number" name="entry.812587699" id="nomor-telepon-pengirim" placeholder="No Telepon Pengirim" required />
                     <span class="text-danger"> <br />*Email dan Nomor telepon tidak akan ditampilkan. Mohon tetap diisi dengan benar untuk konfirmasi jika terdapat kendala. </span>
                 </div>
-                <div class="data-pengirim" onclick="checkFieldsAndShowSection()">
-                    <div class="tombol-next" style="display: block">Next</div>
+                <div class="data-pengirim">
+                    <div class="tombol-next" style="display: block" onclick="checkFieldsAndShowSection()">Next</div>
+                    <div class="btn tombol-tutorial mt-2" onclick="showTutorial()">Tutorial</div>
                 </div>
             </section>
-            <section id="product">
-                <div class="container">
-                    <div class="all-cards">
-                        <div class="card p-2" style="width: 18rem">
-                            <img src="https://lzd-img-global.slatic.net/g/ff/kf/Sacce0bf1a73948e79e6e34926ecc5798X.jpg_720x720q80.jpg" class="card-img-top" alt="..." />
-                            <h2 class="ms-3 mt-2">Paket A</h2>
-                            <div class="card-body">
-                                <p class="card-text">Bouquet + Silverqueen</p>
-                            </div>
-                            <a class="btn btn-primary w-auto">Rp.20.000</a>
-                        </div>
-                        <div class="card p-2" style="width: 18rem">
-                            <img src="https://down-id.img.susercontent.com/file/c655f88b44ccd1e42165efdb59301a11" class="card-img-top" alt="..." />
-                            <h2 class="ms-3 mt-2">Paket B</h2>
-                            <div class="card-body">
-                                <p class="card-text">Bouquet + Pocky</p>
-                            </div>
-                            <a class="btn btn-primary w-auto">Rp.25.000</a>
-                        </div>
-                        <div class="card p-2" style="width: 18rem">
-                            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/5/12/3fe1b143-5aa7-47f6-b48c-ee628d0dfe15.jpg" class="card-img-top" alt="..." />
-                            <h2 class="ms-3 mt-2">Bouquet</h2>
-                            <div class="card-body">
-                                <p class="card-text">Hanya satu bouquet</p>
-                            </div>
-                            <a class="btn btn-primary w-auto">Rp.15.000</a>
-                        </div>
-                        <div class="card p-2" style="width: 18rem">
-                            <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/3/412f2228-e17a-4bbe-befe-0fe694e93735.jpg" class="card-img-top" alt="..." />
-                            <h2 class="ms-3 mt-2">Batangan</h2>
-                            <div class="card-body">
-                                <p class="card-text">Hanya satu bunga batangan</p>
-                            </div>
-                            <a class="btn btn-primary w-auto">Rp.10.000</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <section id="penerima-section" style="display: none">
                 <table class="" id="all-penerima">
                     <tbody class="overflow-scroll text-center" onchange="showHargaKeseluruhan()">
@@ -430,16 +433,22 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Tutorial Pengisian</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tutorial Pengisian Data Pengirim</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h3 class="text-center">Isi Data Pengirim</h3>
+                <!-- <h3 class="text-center">Isi Data Pengirim</h3> -->
                 <p>1. Isi dengan namamu, boleh dengan nama asli ataupun nama panggilan. Jika tidak ingin diketahui identitas pengirimnya, maka isi dengan "Anonymous".</p>
-                <img src="tutorial-pengisian/step-1.png" alt="" />
+                <img src="https://i.ibb.co/SxQXx4g/image.png" class="mb-3" alt="" />
+                <p>2. Klik tombol yang dilingkari merah ini, lalu isi dengan kelasmu. Jika tidak ingin diketahui identitas pengirimnya, maka isi dengan "Anonymous".</p>
+                <img src="https://i.ibb.co/tzgWXjq/image.png" width="350px" class="mb-3" alt="" />
+                <p>3. Masukkan Email aktif dan Nomor HP dengan benar. Keduanya hanya digunakan untuk konfirmasi apabila terdapat kedala. Jika tidak diisi dengan benar, maka resiko diluar tanggungjawab kami.</p>
+                <img src="https://i.ibb.co/7JntZgW/image.png" width="350px" class="mb-3" alt="" />
+                <p>4. Jika semua data sudah diisi dengan benar, klik tombol "Next" untuk melanjutkan. Klik tombol "Tutorial" utuk menampilkan tutorial ini lagi.</p>
+                <img src="https://i.ibb.co/s3Ncm1j/image.png" width="350px" class="mb-3" alt="" />
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mengerti</button>
             </div>
         </div>
     </div>

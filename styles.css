@@ -5,10 +5,11 @@ input[type="checkbox"] {
 body {
     width: 100%;
     margin: auto;
+    background-color: #f3efe5;
 }
 
 #pengirim-section {
-    background-color: #f9f9e0;
+    background-color: #f3efe5;
     width: 50%;
     margin: 20px auto;
     /* border: 2px solid black; */
@@ -29,6 +30,16 @@ body {
     border: 2px solid #548a92;
 }
 
+.tombol-tutorial {
+    border: 2px solid #548a92;
+    width: 200px;
+    border-radius: 10px;
+}
+.tombol-tutorial:hover {
+    background-color: #548a92;
+    color: white;
+}
+
 #tambah-penerima-btn {
     width: 100%;
     border: 1px solid black;
@@ -47,11 +58,6 @@ body {
     flex: 0 0 auto;
     margin: 15px;
 }
-.card-body {
-}
-
-.card-body {
-}
 
 .sticky-card {
     min-width: 400px;
@@ -68,6 +74,7 @@ body {
 table {
     border: 2px solid black;
     width: 100%;
+    background-color: white;
 }
 th,
 td {
@@ -136,13 +143,21 @@ textarea {
     width: 100%;
     margin: auto;
     border: 2px solid #548a92;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 0;
     transition: all 0.2s;
 }
 .tombol-next:hover {
     color: white;
     background-color: #548a92;
+}
+
+.btn-harga {
+    pointer-events: none;
+
+    background-color: #548a92;
+    border-color: #548a92;
+    color: white;
 }
 
 table tr td:nth-child(9) {
