@@ -261,20 +261,27 @@ function addPenerima() {
     }
 }
 
+function isNumber(value) {
+    return typeof value === "number";
+}
+
 function removePenerima(IDPenerima) {
     var form = document.querySelector("form");
     form.removeAttribute(onchange);
 
     var penerima = document.getElementById(IDPenerima);
     var hargaPenerima = penerima.querySelector("#harga");
-    hargaTotal -= Number(hargaPenerima.textContent);
 
-    var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
-    totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
+    if (isNumber(hargaPenerima)) {
+        hargaTotal -= Number(hargaPenerima.textContent);
 
+        var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
+        totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
+    }
     penerima.parentNode.removeChild(penerima);
     penerima.remove();
     form.setAttribute(onchange, "showHargaKeseluruhan()");
+    console.log(hargaTotal);
 }
 
 function Bayar() {}
@@ -318,7 +325,7 @@ linkBuktiPembayaran = "";
 var fileInput = document.getElementById("bukti-pembayaran-input-file");
 fileInput.addEventListener("change", (e) => {
     var gambar = fileInput.files[0];
-    document.getElementById("status-file-bukti-pembayaran").textContent = `selected "${gambar.name}"`;
+    document.getElementById("status-file-bukti-pembayaran").src = URL.createObjectURL(gambar);
 });
 
 function validateBuktiPembayaran() {
