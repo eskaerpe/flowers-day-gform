@@ -345,7 +345,9 @@ function submitFormModal() {
 	if (validateForm() == true) {
 		if (validateFormTable() == true) {
 			if (validateBuktiPembayaran() == true) {
-				sleep(2000).then(() => {
+				$("#loadingModal").modal("show");
+				sleep(5000).then(() => {
+					$("#loadingModal").modal("hide");
 					console.log("hlo");
 					document.getElementById("total-harga-keseluruhan-to-form").value = hargaTotal;
 					document.getElementById("link-bukti-pembayaran-to-form").value = linkBuktiPembayaran;

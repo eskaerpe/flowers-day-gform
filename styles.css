@@ -137,5 +137,5 @@ footer {
 
 #total-harga-keseluruhan-to-form,
 #link-bukti-pembayaran-to-form {
-	display: none;
+	/* display: none; */
 }
