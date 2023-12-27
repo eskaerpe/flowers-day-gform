@@ -315,6 +315,12 @@ function validateFormTable() {
 
 linkBuktiPembayaran = "";
 
+var fileInput = document.getElementById("bukti-pembayaran-input-file");
+fileInput.addEventListener("change", (e) => {
+    var gambar = fileInput.files[0];
+    document.getElementById("status-file-bukti-pembayaran").textContent = `selected "${gambar.name}"`;
+});
+
 function validateBuktiPembayaran() {
     var fileInput = document.getElementById("bukti-pembayaran-input-file");
 
@@ -362,10 +368,10 @@ function submitFormModal() {
     }
 }
 
-// function submitForm() {
-//     var form = document.querySelector("form");
-//     form.submit();
-// }
+function submitForm() {
+    var form = document.querySelector("form");
+    form.submit();
+}
 
 // $(document).ready(function () {
 //     // Show the Modal on load
