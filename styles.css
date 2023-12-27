@@ -1,136 +1,141 @@
 input[type="checkbox"] {
-    transform: scale(1.5);
+	transform: scale(1.5);
 }
 
 body {
-    width: 100%;
-    margin: auto;
+	width: 100%;
+	margin: auto;
 }
 
 #pengirim-section {
-    background-color: #f9f9e0;
-    width: 50%;
-    margin: 20px auto;
-    /* border: 2px solid black; */
-    border-radius: 20px;
-    padding: 25px;
+	background-color: #f9f9e0;
+	width: 50%;
+	margin: 20px auto;
+	/* border: 2px solid black; */
+	border-radius: 20px;
+	padding: 25px;
 }
 
 .data-pengirim {
-    display: block;
-    text-align: center;
-    margin: 10px;
+	display: block;
+	text-align: center;
+	margin: 10px;
 }
 .data-pengirim input,
 .data-pengirim select {
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
-    border: 2px solid #548a92;
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
+	border: 2px solid #548a92;
 }
 
 #tambah-penerima-btn {
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 0;
-    /* position: absolute;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 0;
+	/* position: absolute;
     margin-top: -50px;
     right: 20px; */
 }
 
 #penerima-section {
-    overflow-x: auto;
+	overflow-x: auto;
 }
 
 table {
-    border: 2px solid black;
-    width: 100%;
+	border: 2px solid black;
+	width: 100%;
 }
 th,
 td {
-    border: 2px solid black;
-    padding: 5px;
+	border: 2px solid black;
+	padding: 5px;
 }
 
 textarea {
-    width: 200px;
+	width: 200px;
 }
 
 .keterangan {
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	text-align: center;
 }
 .keterangan #tambah-penerima-btn {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .keterangan #tombol-submit {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        width: 100%;
-    }
-    #pengirim-section {
-        width: 100%;
-    }
-    * {
-        font-size: 0.9rem;
-    }
-    table,
-    .total-harga-text {
-        font-size: 1.2rem;
-    }
-    th td {
-        margin: 10px 0;
-        padding: 5px;
-    }
+	body {
+		width: 100%;
+	}
+	#pengirim-section {
+		width: 100%;
+	}
+	* {
+		font-size: 0.9rem;
+	}
+	table,
+	.total-harga-text {
+		font-size: 1.2rem;
+	}
+	th td {
+		margin: 10px 0;
+		padding: 5px;
+	}
 
-    .keterangan button:nth-child(1) {
-        width: 100%;
-        margin: auto;
-    }
-    .keterangan .total-harga-text {
-        width: 90%;
-        margin: auto;
-    }
-    #tombol-submit {
-        width: 90%;
-        margin: auto;
-    }
-    .tombol-next {
-        font-size: 1.3rem;
-    }
+	.keterangan button:nth-child(1) {
+		width: 100%;
+		margin: auto;
+	}
+	.keterangan .total-harga-text {
+		width: 90%;
+		margin: auto;
+	}
+	#tombol-submit {
+		width: 90%;
+		margin: auto;
+	}
+	.tombol-next {
+		font-size: 1.3rem;
+	}
 }
 
 .tombol-next {
-    cursor: pointer;
-    width: 100%;
-    margin: auto;
-    border: 2px solid #548a92;
-    border-radius: 20px;
-    padding: 10px 0;
-    transition: all 0.2s;
+	cursor: pointer;
+	width: 100%;
+	margin: auto;
+	border: 2px solid #548a92;
+	border-radius: 20px;
+	padding: 10px 0;
+	transition: all 0.2s;
 }
 .tombol-next:hover {
-    color: white;
-    background-color: #548a92;
+	color: white;
+	background-color: #548a92;
 }
 
 table tr td:nth-child(9) {
-    background-color: yellow;
+	background-color: yellow;
 }
 
 footer {
-    /* width: auto; */
-    position: relative;
-    bottom: 0;
-    margin-top: 200px;
+	/* width: auto; */
+	position: relative;
+	bottom: 0;
+	margin-top: 200px;
 }
 
 #onLoadModal .modal-body {
-    text-align: center;
+	text-align: center;
 }
 #onLoadModal p {
-    text-align: justify;
+	text-align: justify;
+}
+
+#total-harga-keseluruhan-to-form,
+#link-bukti-pembayaran-to-form {
+	display: none;
 }
