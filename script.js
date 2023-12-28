@@ -404,6 +404,8 @@ function submitForm() {
 
     var tombolSubmitDalamFormTag = document.getElementById("button-submit-inside-form");
     tombolSubmitDalamFormTag.click();
+    $("#submitConfirmationModal").modal("hide");
+    $("#loadingModal").modal("show");
 }
 
 // window.onload = function () {
@@ -417,23 +419,3 @@ function submitForm() {
 //     // Show the Modal on load
 //     $("#onLoadModal").modal("show");
 // });
-
-window.onload = function () {
-    if (window.location.pathname.endsWith("submitted.html")) {
-        console.log("this is submitted");
-        // Mengambil data pesanan dari localStorage
-        let orders = JSON.parse(localStorage.getItem("orders"));
-
-        // Membuat rekap pesanan
-        for (let i = 0; i < orders.length; i++) {
-            let order = orders[i];
-            let packages = [];
-            if (order.paketA) packages.push("Paket A");
-            if (order.paketB) packages.push("Paket B");
-            if (order.bouquet) packages.push("Bouquet");
-            if (order.batangan) packages.push("Batangan");
-            document.querySelector(".box-thank-you").innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`;
-            console.log(`<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`);
-        }
-    }
-};
