@@ -376,9 +376,19 @@ function submitFormModal() {
 }
 
 function submitForm() {
-    var form = document.querySelector("form");
-    form.submit();
+    // var form = document.querySelector("form");
+    // form.submit();
+
+    var tombolSubmitDalamFormTag = document.getElementById("button-submit-inside-form");
+    tombolSubmitDalamFormTag.click();
 }
+
+window.onload = function () {
+    if (!window.location.hash) {
+        window.location = window.location + "#loaded";
+        window.location.reload();
+    }
+};
 
 // $(document).ready(function () {
 //     // Show the Modal on load

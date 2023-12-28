@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Docusadsament</title>
-	</head>
-	<body>
-		<h1>THANK YOU!</h1>
-		<h3>Pesanan Anda berhasil diinput!</h3>
-		<h3>
-			Untuk mengirim ke lebih banyak orang, silahkan ulangi langkah sebelumnya
-			dengan data yang berbeda. <a href="index.html">Klik di sini!</a>
-		</h3>
-		<span id="nama-pengirim-1"></span>
-		<span id="kelas-pengirim-1"></span>
-		<script>
-			var params = new URLSearchParams(window.location.search);
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>THANK YOU!</title>
+        <link rel="icon" href="logo-osissmatb-24.png" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
 
-			var nama_pengirim_1 = params.get("entry.287391154");
-			var kelas_pengirim_1 = params.get("entry.2133329921");
-			console.log(params);
-			document.getElementById("nama-pengirim-1").textContent = nama_pengirim_1;
-			document.getElementById("kelas-pengirim-1").textContent =
-				kelas_pengirim_1;
-		</script>
-	</body>
+    <body>
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div class="border border-3 border-success"></div>
+                <div class="card bg-white shadow p-5">
+                    <div class="mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1>Thank You!</h1>
+                        <h4>Pesanan Anda berhasil diinput!</h4>
+                        <p>Untuk mengirim ke lebih banyak orang, silahkan ulangi langkah sebelumnya dengan data yang berbeda. <a href="index.html">Klik di sini!</a></p>
+                        <a class="btn btn-outline-success" href="index.html">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Docusadsament</title>
+    </head>
+    <body>
+        <h1>THANK YOU!</h1>
+        <h3>Pesanan Anda berhasil diinput!</h3>
+        <h3>Untuk mengirim ke lebih banyak orang, silahkan ulangi langkah sebelumnya dengan data yang berbeda. <a href="index.html">Klik di sini!</a></h3>
+        <span id="nama-pengirim-1"></span>
+        <span id="kelas-pengirim-1"></span>
+    </body>
+</html> -->

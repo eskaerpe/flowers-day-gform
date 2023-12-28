@@ -16,8 +16,8 @@
         </script>
         <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none" onload="if(submitted){window.location='submitted.html';}"></iframe>
         <h1 class="text-center m-0 p-2" style="font-size: 2.5rem; background-color: rgb(88, 76, 49); color: white">Flowers Day 2024</h1>
-        <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true">
-            <!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true"> -->
+        <!-- <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" onsubmit="submitted=true"> -->
+            <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSf7wt8z16oHjKkT4ajmo8ijCKoAljA5stmULOQjzq0pTY8Szg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true">
             <section id="product" style="background-color: rgb(233, 221, 187)">
                 <div class="container p-2">
                     <h2 class="text-center mt-3">Our Products</h2>
@@ -203,7 +203,9 @@
             </section>
             <input type="text" name="entry.781970590" id="total-harga-keseluruhan-to-form" placeholder="total harga" />
             <input type="text" name="entry.1547535742" id="link-bukti-pembayaran-to-form" placeholder="link bukti pembayaran" />
+            <input type="submit" value="" id="button-submit-inside-form" style="display:none">
         </form>
+        
         <div class="keterangan" style="display: none">
             <button id="tambah-penerima-btn" onclick="addPenerima()" class="btn">+ tambah penerima</button>
             <h3 class="total-harga-text">Total Harga:<span id="total-harga-keseluruhan" class="total-harga-text">-</span></h3>
@@ -221,7 +223,7 @@
                 </label>
             </div>
             <img id="status-file-bukti-pembayaran" class="m-3" width="200px"></img>
-
+            <br>
             <button id="tombol-submit" type="button" class="btn btn-primary" data-bs-toggle="modal" id="tombol-submit" onclick="submitFormModal()">Submit</button>
             <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitConfirmationModal" id="tombol-submit">Submit</button> -->
         </div>
@@ -415,12 +417,12 @@
 </div>
 
 <!-- Loading Modal -->
-<div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Loading...</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
             <div class="modal-body">
                 <p>Mohon ditunggu</p>
