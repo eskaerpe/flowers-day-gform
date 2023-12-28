@@ -272,7 +272,7 @@ function removePenerima(IDPenerima) {
     var penerima = document.getElementById(IDPenerima);
     var hargaPenerima = penerima.querySelector("#harga");
 
-    if (isNumber(hargaPenerima)) {
+    if (isNumber(Number(hargaPenerima.textContent))) {
         hargaTotal -= Number(hargaPenerima.textContent);
 
         var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
