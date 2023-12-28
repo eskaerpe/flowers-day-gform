@@ -272,8 +272,10 @@ function removePenerima(IDPenerima) {
     var penerima = document.getElementById(IDPenerima);
     var hargaPenerima = penerima.querySelector("#harga");
 
-    if (isNumber(Number(hargaPenerima.textContent))) {
-        hargaTotal -= Number(hargaPenerima.textContent);
+    if ((hargaPenerima.textContent == "-") | (hargaPenerima.textContent == "0")) {
+    } else if (hargaPenerima.textContent != "-") {
+        // if ((hargaPenerima.textContent != "-") | (hargaPenerima.textContent != "0")) {
+        hargaTotal -= hargaPenerima.textContent;
 
         var totalHargaElement = document.querySelector("#total-harga-keseluruhan");
         totalHargaElement.textContent = ` Rp.${hargaTotal.toLocaleString("id-ID")}`;
@@ -364,37 +366,12 @@ function submitFormModal() {
             if (validateBuktiPembayaran() == true) {
                 $("#loadingModal").modal("show");
                 sleep(5000).then(() => {
+                    /// Hide loadng modal
                     $("#loadingModal").modal("hide");
                     console.log("hlo");
                     document.getElementById("total-harga-keseluruhan-to-form").value = hargaTotal;
                     document.getElementById("link-bukti-pembayaran-to-form").value = linkBuktiPembayaran;
                     $("#submitConfirmationModal").modal("show");
-
-                    // Mengambil semua baris pesanan
-                    let rows = document.querySelectorAll('tr[id^="penerima-"]');
-
-                    // Membuat array untuk menyimpan data pesanan
-                    let orders = [];
-
-                    // Iterasi melalui setiap baris
-                    for (let row of rows) {
-                        // Mengambil data dari setiap kolom
-                        let name = row.querySelector("#nama-penerima").value;
-                        let kelas = row.querySelector("#kelas-penerima").value;
-                        let paketA = row.querySelector("#paket-A").checked;
-                        let paketB = row.querySelector("#paket-B").checked;
-                        let bouquet = row.querySelector("#bouquet").checked;
-                        let batangan = row.querySelector("#batangan").checked;
-                        let price = row.querySelector("#harga").innerText;
-
-                        // Menambahkan data ke array pesanan
-                        orders.push({ name, kelas, paketA, paketB, bouquet, batangan, price });
-                    }
-
-                    // Menyimpan data pesanan ke localStorage
-                    localStorage.setItem("orders", JSON.stringify(orders));
-
-                    console.log(orders);
                 });
             }
         }
@@ -404,6 +381,34 @@ function submitFormModal() {
 function submitForm() {
     // var form = document.querySelector("form");
     // form.submit();
+    let namaPengirim = document.querySelector("#nama-pengirim").value;
+    let kelasPengirim = document.querySelector("#kelas-pengirim").value;
+    // Mengambil semua baris pesanan
+    let rows = document.querySelectorAll('tr[id^="penerima-"]');
+
+    // Membuat array untuk menyimpan data pesanan
+    let orders = [];
+
+    // Iterasi melalui setiap baris
+    for (let row of rows) {
+        // Mengambil data dari setiap kolom
+        let name = row.querySelector("#nama-penerima").value;
+        let kelas = row.querySelector("#kelas-penerima").value;
+        let paketA = row.querySelector("#paket-A").checked;
+        let paketB = row.querySelector("#paket-B").checked;
+        let bouquet = row.querySelector("#bouquet").checked;
+        let batangan = row.querySelector("#batangan").checked;
+        let price = row.querySelector("#harga").innerText;
+        let pesan = row.querySelector("#pesan").value;
+
+        // Menambahkan data ke array pesanan
+        orders.push({ name, kelas, paketA, paketB, bouquet, batangan, price, pesan, namaPengirim, kelasPengirim });
+    }
+
+    // Menyimpan data pesanan ke localStorage
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    console.log(orders);
 
     var tombolSubmitDalamFormTag = document.getElementById("button-submit-inside-form");
     tombolSubmitDalamFormTag.click();
@@ -421,18 +426,22 @@ function submitForm() {
 //     $("#onLoadModal").modal("show");
 // });
 
-if (window.location.pathname.endsWith("submitted.html")) {
-    // Mengambil data pesanan dari localStorage
-    let orders = JSON.parse(localStorage.getItem("orders"));
+window.onload = function () {
+    if (window.location.pathname.endsWith("submitted.html")) {
+        console.log("this is submitted");
+        // Mengambil data pesanan dari localStorage
+        let orders = JSON.parse(localStorage.getItem("orders"));
 
-    // Membuat rekap pesanan
-    for (let i = 0; i < orders.length; i++) {
-        let order = orders[i];
-        let packages = [];
-        if (order.paketA) packages.push("Paket A");
-        if (order.paketB) packages.push("Paket B");
-        if (order.bouquet) packages.push("Bouquet");
-        if (order.batangan) packages.push("Batangan");
-        document.body.innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`;
+        // Membuat rekap pesanan
+        for (let i = 0; i < orders.length; i++) {
+            let order = orders[i];
+            let packages = [];
+            if (order.paketA) packages.push("Paket A");
+            if (order.paketB) packages.push("Paket B");
+            if (order.bouquet) packages.push("Bouquet");
+            if (order.batangan) packages.push("Batangan");
+            document.querySelector(".box-thank-you").innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`;
+            console.log(`<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`);
+        }
     }
-}
+};

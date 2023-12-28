@@ -24,14 +24,37 @@
                     <div class="text-center box-thank-you">
                         <h1>Thank You!</h1>
                         <h4>Pesanan Anda berhasil diinput!</h4>
-                        <p>Untuk mengirim ke lebih banyak orang, silahkan ulangi langkah sebelumnya dengan data yang berbeda. <a href="index.html">Klik di sini!</a></p>
+                        <p>Untuk mengirim ke lebih banyak orang, silakan ulangi langkah sebelumnya dengan data yang berbeda. <a href="index.html">Klik di sini!</a></p>
                         <a class="btn btn-outline-success" href="index.html">Kembali</a>
                     </div>
+                </div>
+                <div class="card text-justify m-3 p-3 card bg-white shadow">
+                    <h6 class="card-header info-pengirim text-center"></h6>
+                    <div class="card-body rekap"></div>
+                    <div class="card-footer text-muted border-top border-dark">Silakan screenshot rekap pesananmu ini, barangkali dibutuhkan.</div>
                 </div>
             </div>
         </div>
     </body>
-    <script src="script.js"></script>
+    <script>
+        console.log("this is index");
+        // Mengambil data pesanan dari localStorage
+        let orders = JSON.parse(localStorage.getItem("orders"));
+
+        document.querySelector(".info-pengirim").textContent = `Detail Order dari "${orders[0].namaPengirim} | ${orders[0].kelasPengirim}"`;
+
+        // Membuat rekap pesanan
+        for (let i = 0; i < orders.length; i++) {
+            let order = orders[i];
+            let packages = [];
+            if (order.paketA) packages.push("Paket A");
+            if (order.paketB) packages.push("Paket B");
+            if (order.bouquet) packages.push("Bouquet");
+            if (order.batangan) packages.push("Batangan");
+            document.querySelector(".rekap").innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")}, (Total: Rp.${Number(order.price).toLocaleString("id-ID")})</li>`;
+        }
+        document.querySelector(".rekap").innerHTML += "";
+    </script>
 </html>
 <!-- 
 <!DOCTYPE html>
