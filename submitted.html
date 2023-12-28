@@ -24,7 +24,7 @@
                     </div>
                     <div class="text-center box-thank-you">
                         <h1>Thank You!</h1>
-                        <h4>Your order has been successfully placed</h4>
+                        <h4>Pesanan Anda akan diproses.</h4>
                         <p>Untuk mengirim ke lebih banyak orang, silakan ulangi langkah sebelumnya dengan data yang berbeda.</p>
                         <a class="btn btn-outline-success" href="index.html">Klik di Sini</a>
                     </div>
@@ -70,7 +70,7 @@
                         </table>
                     </div>
                     <div class="col-12 text-center">
-                        <h5>Interested in creating a website like this</h5>
+                        <h5>Interested in creating a website like this?</h5>
                         <p>
                             Please don't hesitate to contact me for business inquires. <br />
                             <a href="https://wa.me/6281380730390?text=Halo%2C%20saya%20mau%20membuat%20website%20seperti%20Flowers%20Day%20ini.%20">Click Here</a>
@@ -100,7 +100,7 @@
             if (order.paketB) packages.push("Paket B");
             if (order.bouquet) packages.push("Bouquet");
             if (order.batangan) packages.push("Batangan");
-            document.querySelector(".rekap").innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")}, (Total: Rp.${Number(order.price).toLocaleString("id-ID")})</li>`;
+            document.querySelector(".rekap").innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} <b>(Total: Rp.${Number(order.price).toLocaleString("id-ID")})</b></li>`;
         }
         document.querySelector(".rekap").innerHTML += "";
     </script>

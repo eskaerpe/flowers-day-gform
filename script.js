@@ -330,7 +330,7 @@ fileInput.addEventListener("change", (e) => {
     document.getElementById("status-file-bukti-pembayaran").src = URL.createObjectURL(gambar);
 });
 
-function validateBuktiPembayaran() {
+async function validateBuktiPembayaran() {
     var fileInput = document.getElementById("bukti-pembayaran-input-file");
 
     var gambar = fileInput.files[0];
@@ -341,38 +341,30 @@ function validateBuktiPembayaran() {
     let payload = new FormData();
     payload.append("image", gambar); // Ganti 'File' dengan file gambar Anda
 
-    fetch("https://api.imgbb.com/1/upload?key=1b4ee72305d5537e9aecb8ab2336e1f0", {
-        method: "POST",
-        body: payload,
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            // console.log("response", data);
-            // console.log("response URL", data.data.image.url); // Ini adalah URL gambar Anda
-            linkBuktiPembayaran = data.data.image.url;
-        })
-        .catch((error) => {
-            console.log("error", error);
+    try {
+        $("#loadingModal").modal("show"); // Tampilkan modal loading
+        const response = await fetch("https://api.imgbb.com/1/upload?key=1b4ee72305d5537e9aecb8ab2336e1f0", {
+            method: "POST",
+            body: payload,
         });
+        const data = await response.json();
+        linkBuktiPembayaran = data.data.image.url;
+        $("#loadingModal").modal("hide"); // Sembunyikan modal loading
+    } catch (error) {
+        console.log("error", error);
+        $("#loadingModal").modal("hide"); // Sembunyikan modal loading jika terjadi kesalahan
+    }
     return true;
 }
 
-function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-function submitFormModal() {
+async function submitFormModal() {
     if (validateForm() == true) {
         if (validateFormTable() == true) {
-            if (validateBuktiPembayaran() == true) {
-                $("#loadingModal").modal("show");
-                sleep(5000).then(() => {
-                    /// Hide loadng modal
-                    $("#loadingModal").modal("hide");
-                    console.log("hlo");
-                    document.getElementById("total-harga-keseluruhan-to-form").value = hargaTotal;
-                    document.getElementById("link-bukti-pembayaran-to-form").value = linkBuktiPembayaran;
-                    $("#submitConfirmationModal").modal("show");
-                });
+            if ((await validateBuktiPembayaran()) == true) {
+                console.log("hlo");
+                document.getElementById("total-harga-keseluruhan-to-form").value = hargaTotal;
+                document.getElementById("link-bukti-pembayaran-to-form").value = linkBuktiPembayaran;
+                $("#submitConfirmationModal").modal("show");
             }
         }
     }
