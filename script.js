@@ -369,6 +369,32 @@ function submitFormModal() {
                     document.getElementById("total-harga-keseluruhan-to-form").value = hargaTotal;
                     document.getElementById("link-bukti-pembayaran-to-form").value = linkBuktiPembayaran;
                     $("#submitConfirmationModal").modal("show");
+
+                    // Mengambil semua baris pesanan
+                    let rows = document.querySelectorAll('tr[id^="penerima-"]');
+
+                    // Membuat array untuk menyimpan data pesanan
+                    let orders = [];
+
+                    // Iterasi melalui setiap baris
+                    for (let row of rows) {
+                        // Mengambil data dari setiap kolom
+                        let name = row.querySelector("#nama-penerima").value;
+                        let kelas = row.querySelector("#kelas-penerima").value;
+                        let paketA = row.querySelector("#paket-A").checked;
+                        let paketB = row.querySelector("#paket-B").checked;
+                        let bouquet = row.querySelector("#bouquet").checked;
+                        let batangan = row.querySelector("#batangan").checked;
+                        let price = row.querySelector("#harga").innerText;
+
+                        // Menambahkan data ke array pesanan
+                        orders.push({ name, kelas, paketA, paketB, bouquet, batangan, price });
+                    }
+
+                    // Menyimpan data pesanan ke localStorage
+                    localStorage.setItem("orders", JSON.stringify(orders));
+
+                    console.log(orders);
                 });
             }
         }
@@ -383,14 +409,30 @@ function submitForm() {
     tombolSubmitDalamFormTag.click();
 }
 
-window.onload = function () {
-    if (!window.location.hash) {
-        window.location = window.location + "#loaded";
-        window.location.reload();
-    }
-};
+// window.onload = function () {
+//     if (!window.location.hash) {
+//         window.location = window.location + "#loaded";
+//         window.location.reload();
+//     }
+// };
 
 // $(document).ready(function () {
 //     // Show the Modal on load
 //     $("#onLoadModal").modal("show");
 // });
+
+if (window.location.pathname.endsWith("submitted.html")) {
+    // Mengambil data pesanan dari localStorage
+    let orders = JSON.parse(localStorage.getItem("orders"));
+
+    // Membuat rekap pesanan
+    for (let i = 0; i < orders.length; i++) {
+        let order = orders[i];
+        let packages = [];
+        if (order.paketA) packages.push("Paket A");
+        if (order.paketB) packages.push("Paket B");
+        if (order.bouquet) packages.push("Bouquet");
+        if (order.batangan) packages.push("Batangan");
+        document.body.innerHTML += `<p>${i + 1}. ${order.name} (${order.kelas}): ${packages.join(", ")} (${order.price})</p>`;
+    }
+}
