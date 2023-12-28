@@ -136,6 +136,9 @@ textarea {
     .bukti-bayar label {
         width: 90%;
     }
+    #status-file-bukti-pembayaran {
+        max-width: 350px;
+    }
 }
 
 .tombol-next {
@@ -210,4 +213,8 @@ footer {
 .bukti-bayar label svg {
     height: 16px;
     margin-right: 4px;
+}
+
+#status-file-bukti-pembayaran {
+    max-width: 350px;
 }

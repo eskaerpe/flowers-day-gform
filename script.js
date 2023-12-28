@@ -191,7 +191,7 @@ function showHargaKeseluruhan() {
 function addPenerima() {
     if (jumlahPenerima < 10) {
         jumlahPenerima += 1;
-        console.log(jumlahPenerima);
+        // console.log(jumlahPenerima);
         // Dapatkan referensi ke elemen template
         var template = document.querySelector("#template-penerima");
 
@@ -229,16 +229,16 @@ function addPenerima() {
         var pesanPenerima = newTr.querySelector("#pesan");
 
         // Testing in console
-        console.log(namaPengirimClone);
-        console.log(kelasPengirimClone);
+        // console.log(namaPengirimClone);
+        // console.log(kelasPengirimClone);
 
-        console.log(namaPenerima);
-        console.log(kelasPenerima);
-        console.log(paketPenerimaA);
-        console.log(paketPenerimaB);
-        console.log(bouquetPenerima);
-        console.log(batanganPenerima);
-        console.log(pesanPenerima);
+        // console.log(namaPenerima);
+        // console.log(kelasPenerima);
+        // console.log(paketPenerimaA);
+        // console.log(paketPenerimaB);
+        // console.log(bouquetPenerima);
+        // console.log(batanganPenerima);
+        // console.log(pesanPenerima);
         // EDIT GOOGLE FORMS ATTRIBUTE NAME
         namaPengirimClone.setAttribute("name", GFormsPengirimName[`namaPengirim${jumlahPenerima}`]); //
         kelasPengirimClone.setAttribute("name", GFormsPengirimName[`kelasPengirim${jumlahPenerima}`]); //
@@ -254,8 +254,8 @@ function addPenerima() {
         namaPengirimClone.setAttribute("value", document.getElementById("nama-pengirim").value);
         kelasPengirimClone.setAttribute("value", document.getElementById("kelas-pengirim").value);
 
-        console.log(namaPengirimClone.value);
-        console.log(kelasPengirimClone.value);
+        // console.log(namaPengirimClone.value);
+        // console.log(kelasPengirimClone.value);
     } else if (jumlahPenerima >= 10) {
         $("#maxPenerimaModal").modal("show");
     }
@@ -281,7 +281,7 @@ function removePenerima(IDPenerima) {
     penerima.parentNode.removeChild(penerima);
     penerima.remove();
     form.setAttribute(onchange, "showHargaKeseluruhan()");
-    console.log(hargaTotal);
+    // console.log(hargaTotal);
 }
 
 function Bayar() {}
@@ -301,7 +301,7 @@ function validateForm() {
 function validateFormTable() {
     var table = document.querySelector("table");
     for (var i = 1; i < table.rows.length; i++) {
-        console.log(i);
+        // console.log(i);
         var colHarga = document.querySelector(`table tr:nth-child(${i + 1}) td:nth-child(9)`);
         if (colHarga.textContent === "-" || colHarga.textContent === "0") {
             $("#warningPilihProdukModal").modal("show");
@@ -345,8 +345,8 @@ function validateBuktiPembayaran() {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log("response", data);
-            console.log("response URL", data.data.image.url); // Ini adalah URL gambar Anda
+            // console.log("response", data);
+            // console.log("response URL", data.data.image.url); // Ini adalah URL gambar Anda
             linkBuktiPembayaran = data.data.image.url;
         })
         .catch((error) => {
