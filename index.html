@@ -211,6 +211,18 @@
             <button id="tambah-penerima-btn" onclick="addPenerima()" class="btn">+ tambah penerima</button>
             <h3 class="total-harga-text">Total Harga:<span id="total-harga-keseluruhan" class="total-harga-text">-</span></h3>
 
+            <div class="payment-method mt-3">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Payment Method
+                    </a>
+                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" onclick="$('#qrisModal').modal('show')">Qris</a></li>
+                      <li><a class="dropdown-item" onclick="$('#bankModal').modal('show')">Transfer Bank</a></li>
+                    </ul>
+                  </div>
+            </div>
             <div class="bukti-bayar">
                 <input type="file" name="" id="bukti-pembayaran-input-file" accept="image/png, image/jpg, image/jpeg, image/heic, image/heif, image/tiff" />
                 <label for="bukti-pembayaran-input-file">
@@ -220,8 +232,10 @@
                             d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
                         ></path>
                     </svg>
-                    <span>Upload bukti Pembayaran</span>
+                    <span id="selected-filename">Upload bukti Pembayaran</span>
+                    
                 </label>
+                <p>Rename file dengan jelas, misalkan "Pesanan-Namaku-X4"</p>
             </div>
             <img id="status-file-bukti-pembayaran" class="m-3" ></img>
             <br>
@@ -431,6 +445,49 @@
         </div>
     </div>
 </div>
+
+<!-- Qris Modal -->
+<div class="modal fade" id="qrisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Pembayaran dengan QRIS</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body text-center">
+                
+                <img src="https://media.istockphoto.com/id/1347277582/id/vektor/contoh-kode-qr-untuk-pemindaian-smartphone-dengan-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=nhbs94A-38H7hbgN6GMd9PHWWrPuFlldf9V4gxa3K4M=" width="350px" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Saya Sudah Bayar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bank tf Modal -->
+<div class="modal fade" id="bankModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Pembayaran dengan Transfer Bank</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>12345678910 - BCA </p>
+                <p>AN. Ytta </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Saya Sudah Bayar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- on load Modal -->
 <div class="modal fade" id="onLoadModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

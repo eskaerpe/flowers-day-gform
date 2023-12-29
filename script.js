@@ -327,6 +327,9 @@ linkBuktiPembayaran = "";
 var fileInput = document.getElementById("bukti-pembayaran-input-file");
 fileInput.addEventListener("change", (e) => {
     var gambar = fileInput.files[0];
+    var gambarFileName = $(e.target).val().split("\\").pop();
+    console.log(gambarFileName);
+    document.getElementById("selected-filename").innerHTML = `selected ${gambarFileName} <br> Click here to Reupload`;
     document.getElementById("status-file-bukti-pembayaran").src = URL.createObjectURL(gambar);
 });
 
@@ -403,9 +406,11 @@ function submitForm() {
     console.log(orders);
 
     var tombolSubmitDalamFormTag = document.getElementById("button-submit-inside-form");
+    var randomSecond = Math.floor(Math.random() * 91) / 10 + 1;
+    $("#loadingModal").modal("show");
+
     tombolSubmitDalamFormTag.click();
     $("#submitConfirmationModal").modal("hide");
-    $("#loadingModal").modal("show");
 }
 
 // window.onload = function () {
