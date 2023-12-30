@@ -101,9 +101,12 @@ function checkFieldsAndShowSection() {
     var nomorTeleponPengirim = document.getElementById("nomor-telepon-pengirim");
     var penerimaSection = document.getElementById("penerima-section");
 
-    // Periksa apakah semua field telah diisi
-    if (namaPengirim.value !== "" && kelasPengirim.value !== "" && emailPengirim.value !== "" && nomorTeleponPengirim.value !== "") {
-        // Jika semua field telah diisi, tampilkan section penerima
+    // Regex untuk validasi email
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Periksa apakah semua field telah diisi dan email valid
+    if (namaPengirim.value !== "" && kelasPengirim.value !== "" && emailPengirim.value !== "" && nomorTeleponPengirim.value !== "" && emailRegex.test(emailPengirim.value)) {
+        // Jika semua field telah diisi dan email valid, tampilkan section penerima
         penerimaSection.style.display = "";
         document.querySelector(".tombol-next").style.display = "none";
         // document.querySelector("#tombol-submit").style.display = "";
@@ -111,7 +114,7 @@ function checkFieldsAndShowSection() {
         document.querySelector(".keterangan").style.display = "";
     } else {
         // Jika tidak, beri peringatan kepada pengguna
-        // alert("Harap isi semua field data pengirim sebelum melanjutkan.");
+        // alert("Harap isi semua field data pengirim sebelum melanjutkan atau masukkan email yang valid.");
         $("#warningIsiDataPengirimModal").modal("show");
     }
 }
